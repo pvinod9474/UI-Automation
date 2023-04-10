@@ -1,0 +1,10 @@
+# Dependencies modules
+
+node_modules
+
+#Cypress
+
+reports
+results
+videos
+screenshots
