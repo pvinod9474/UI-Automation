@@ -1,5 +1,29 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "signUp" : {
+    "name": "Automation Tester",
+    "email": "automationtester2e4@gmail.com",
+    "password": "1234567890",
+    "dobDay": "1",
+    "dobMonth": "June",
+    "dobYear": "2000",
+    "firstName": "Automation",
+    "lastName": "Tester",
+    "company" : "SDET Automation",
+    "address": "SDET Automation - 1",
+    "address2": "SDET Automation - 2",
+    "country" : "India",
+    "state": "SDET",
+    "city": "SDET",
+    "zipCode": "123456",
+    "mobileNumber": "1234567890"
+  },
+  "login" : {
+    "email": "pratiseTesting15@gmail.com",
+    "password": "1234567890"
+  },
+  "inValidLogin" : {
+    "email" : "Testauto@gmail.com",
+    "password": "aewrrdhdfb"
+  }
 }
+ 

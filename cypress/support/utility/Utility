@@ -1,0 +1,13 @@
+export default class Utility {
+    getRandomEmail(){
+        var email = ""
+        var text = "";
+        var possible = "abcdefghijklmnopqrstuvwxyz1234567890";
+        for(var i=0; i<6; i++)
+          text += possible.charAt(Math.floor(Math.random()*possible.length))  // + '@gmail.com'
+          email =  text + '@gmail.com'
+          return email
+
+    }
+
+}

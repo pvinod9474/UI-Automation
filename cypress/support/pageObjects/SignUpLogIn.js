@@ -5,6 +5,7 @@ class SignUplogIn {
             this.signUpButton = '[data-qa="signup-button"]',
             this.loginName = '[data-qa="login-name"]',
             this.loginEmail = '[data-qa="login-email"]',
+            this.loginPassword = "[data-qa='login-password']"
             this.loginButton = '[data-qa="login-button"]'
             this.subscriptionEmail = '#susbscribe_email',
             this.subscription = '#subscribe'
@@ -13,7 +14,7 @@ class SignUplogIn {
             this.signInPassword = '[data-qa="password"]'
             this.dobDays = '[data-qa="days"]'
             this.dobMonth = '[data-qa="months"]'
-            this.dobYear = '[data-qa="years"]'
+            this.dobYear = '[data-qa="years"]' 
             this.newsLetter = "#newsletter"
             this.splOffer = '#optin'
             this.firstName = '[data-qa="first_name"]' 
@@ -46,6 +47,9 @@ class SignUplogIn {
     }
     getLoginEmail() {
         return cy.get(this.loginEmail)
+    }
+    getLoginPassword(){
+        return cy.get(this.loginPassword)
     }
     getLoginButton() {
         return cy.get(this.loginButton)
@@ -116,6 +120,7 @@ class SignUplogIn {
     getContinueButton(){
         return cy.get(this.coutinueButton)
     }
+  
 
 
 }export default SignUplogIn

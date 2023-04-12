@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "cypress-cucumber-preprocessor": {
-  "stepDefinitions": "cypress/e2e/stepDefinitions/*.js",
+  "stepDefinitions": "cypress/e2e/**/*.js" ,
   "messages": {
     "enabled": true,
     "output": "cypress/results/messages/cucumber-messages.ndjson"
