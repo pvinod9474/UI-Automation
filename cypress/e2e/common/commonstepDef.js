@@ -23,9 +23,12 @@ Then("Verifies that 'Logged in as username' is visible", function () {
 Then("Clicks login button", function(){
     signUpLogIn.getLoginButton().click()
 })
-Then("Clicks Delete Account button", function () {
+Then("Clicks Delete Account button", function () { 
     cy.contains("Delete Account").click()
 })
 Then("Verifies that 'ACCOUNT DELETED!' is visible and clicks Continue button", function () {
     cy.contains("Account Deleted!").should('be.visible')
+})
+When("Clicks on Products button", function(){
+    homePage.getProducts().click() 
 })

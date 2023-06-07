@@ -2,16 +2,18 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import HomePage from "../../support/pageObjects/homePage";
 import SignUplogIn from "../../support/pageObjects/SignUpLogIn";
 import Utility from "../../support/utility/Utility";
+import ProductsPage from "../../support/pageObjects/ProductsPage";
 
 const homePage = new HomePage()
 const signUpLogIn = new SignUplogIn()
 const utility = new Utility() 
+const productsPage = new ProductsPage()
 
 
 Then("Verifies 'New User Signup!' is visible", function () {
     cy.contains("New User Signup!").should("be.visible")
 })
-When("Enters name and email address", function () {
+When("Enters name and email address", function () { 
     signUpLogIn.getSignUpEmail().type(utility.getRandomEmail()) //utility.getRandomEmail()
     signUpLogIn.getSignUpName().type(this.data.signUp.name)
 })
@@ -75,3 +77,16 @@ When("Clicks Logout button", function(){
 Then("Verify that user is navigated to login page", function(){
 
 })
+///////////////////////////////////////////////////////////////////////////////////////
+Then("Verify user is navigated to ALL PRODUCTS page successfully and products list is visible", function(){
+    cy.contains("All Products").should("be.visible")
+    productsPage.getProductList().should("be.visible")
+    
+})
+When("Clicks on View Product of first product", function(){
+    productsPage.getProducts().contains("a[href*='product']").click()
+})
+Then("User is landed to product detail page", function(){
+    
+})
+Then("Verify that detail detail is visible: product name, category, price, availability, condition, brand", function(){})
